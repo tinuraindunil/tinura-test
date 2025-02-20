@@ -5,14 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tinura Indunil - Personal Website</title>
 
-  <!-- Content Security Policy for enhanced security -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://cdnjs.cloudflare.com https://kit.fontawesome.com; 
     script-src 'self' https://kit.fontawesome.com 'unsafe-inline'; 
     style-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; 
     font-src 'self' https://cdnjs.cloudflare.com data:;">
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-
   <style>
     /* General Styles */
     body {
@@ -20,33 +18,10 @@
       font-family: Arial, sans-serif;
       transition: background 0.5s, color 0.5s;
       overflow-x: hidden;
+      background-color: white;
+      color: black;
     }
 
-    /* Disable text selection */
-    body, * {
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-
-    /* Disable right-click */
-    body {
-      pointer-events: auto;
-    }
-
-    /* Remove outline on click (focus) */
-    *:focus {
-      outline: none;
-    }
-
-    /* Specifically target links, buttons, and other clickable elements */
-    a, button, input, textarea {
-      outline: none;  /* Removes the focus outline */
-      border: none;   /* Ensures no border appears when focused */
-    }
-
-    /* Header */
     header {
       display: flex;
       justify-content: space-between;
@@ -66,33 +41,6 @@
       color: white;
     }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav ul li {
-      margin: 0 15px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-size: 18px;
-      padding: 5px 0;
-      display: inline-block;
-    }
-
-    .menu-icon {
-      display: none;
-      font-size: 24px;
-      color: white;
-      cursor: pointer;
-    }
-
-    /* Hero Section */
     .hero {
       height: 100vh;
       display: flex;
@@ -105,37 +53,12 @@
       padding: 0 20px;
     }
 
-    .typewriter h1 {
-      font-size: 50px;
-      margin: 0;
-      border-right: 3px solid #fff;
-      padding-right: 5px;
-      white-space: nowrap;
-      overflow: hidden;
-      animation: typing 3.5s steps(30) 1s 1 normal both, blink 0.75s step-end infinite;
-    }
-
-    .hero p {
-      font-size: 22px;
-      margin-top: 10px;
-    }
-
     .cartoon-character {
       width: 250px;
       height: auto;
       margin-top: 20px;
     }
 
-    @keyframes typing {
-      0% { width: 0; }
-      100% { width: 100%; }
-    }
-
-    @keyframes blink {
-      50% { border-color: transparent; }
-    }
-
-    /* Social Icons */
     .social-icons {
       margin-top: 20px;
     }
@@ -147,7 +70,6 @@
       text-decoration: none;
     }
 
-    /* Sections */
     .section {
       padding: 50px 20px;
       text-align: center;
@@ -156,14 +78,12 @@
       animation: fadeInUp 1s ease-out forwards;
     }
 
-    /* About Section */
     .about-section {
-      background-color: #000;  /* Set background to black */
+      background-color: #000;
       color: white;
-      margin-top: -110px; /* Shift the section up by 50px */
+      margin-top: -110px;
     }
 
-    /* Continuous Animation Keyframes */
     @keyframes fadeInUp {
       0% {
         opacity: 0;
@@ -175,69 +95,15 @@
       }
     }
 
-    .light-mode {
-      background-color: #fff;
-      color: #000;
-    }
-
-    .dark-mode {
-      background-color: #000;
-      color: #fff;
-    }
-
-    /* Footer */
     footer {
       text-align: center;
       padding: 20px;
       background: #111;
       color: white;
     }
-
-    .colored-text span {
-      font-weight: bold;
-      background: linear-gradient(90deg, #ff6347, #4caf50, #00bcd4, #ffeb3b, #9c27b0);
-      background-clip: text;
-      color: transparent;
-      -webkit-background-clip: text;
-    }
-
-    /* Mobile View */
-    @media screen and (max-width: 768px) {
-      .typewriter h1 {
-        font-size: 28px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      .cartoon-character {
-        width: 180px;
-      }
-
-      nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 10px;
-        background: rgba(0, 0, 0, 0.9);
-        padding: 15px;
-        border-radius: 8px;
-      }
-
-      nav ul li {
-        margin: 10px 0;
-        text-align: center;
-      }
-
-      .menu-icon {
-        display: block;
-      }
-    }
   </style>
 </head>
-<body class="dark-mode" oncontextmenu="return false;">
+<body>
   <header>
     <h1>tinuraindunil.com</h1>
     <nav>
@@ -246,19 +112,14 @@
         <li><a href="#about">About Me</a></li>
         <li><a href="#contact">Contact Me</a></li>
       </ul>
-      <i class="fas fa-bars menu-icon"></i>
     </nav>
   </header>
 
   <section id="home" class="hero">
-    <div class="typewriter">
-      <h1 class="colored-text">
-        <span>Welcome</span> to <span>TinuraIndunil.com</span>
-      </h1>
-      <p>Digital Marketer | Social Media Consultant | Web Developer | UX/UI Designer</p>
-    </div>
+    <h1>Welcome to TinuraIndunil.com</h1>
+    <p>Digital Marketer | Social Media Consultant | Web Developer | UX/UI Designer</p>
     <img src="images/cartoon-character.gif" alt="Cartoon Character" class="cartoon-character">
-    
+
     <div class="social-icons">
       <a href="https://www.facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a>
       <a href="https://www.youtube.com/yourchannel" target="_blank"><i class="fab fa-youtube"></i></a>
@@ -268,8 +129,7 @@
 
   <section id="about" class="section about-section">
     <h1>About Me</h1>
-    <p>Hi, I’m Tinura Indunil, a UX/UI designer, graphic designer, web developer, video editor, and digital strategist specializing in Meta and YouTube.<br> With a passion for blending creativity with technology.
-<br>I help businesses build engaging digital experiences and create impactful strategies to thrive online.<br> Whether designing intuitive user interfaces, crafting stunning visuals, or developing effective digital marketing plans, I’m dedicated to bringing innovative solutions to the table.</p>
+    <p>Hi, I’m Tinura Indunil, a UX/UI designer, graphic designer, web developer, video editor, and digital strategist specializing in Meta and YouTube.<br> With a passion for blending creativity with technology.</p>
   </section>
 
   <section id="contact" class="section contact-section">
